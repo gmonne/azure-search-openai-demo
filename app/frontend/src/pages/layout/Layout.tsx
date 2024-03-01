@@ -1,11 +1,8 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
-
 import github from "../../assets/github.svg";
-
 import styles from "./Layout.module.css";
-
 import { useLogin } from "../../authConfig";
-
+import itlogo from "../../assets/ITLogoWhite.png";
 import { LoginButton } from "../../components/LoginButton";
 
 const Layout = () => {
@@ -14,7 +11,8 @@ const Layout = () => {
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>GPT + Enterprise data | Sample</h3>
+                        <img src={itlogo} alt="it_logo" width="auto" height="40" className={styles.team_logo} />
+                        <h3 className={styles.headerTitle}>IE PM Mentor</h3>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
@@ -42,7 +40,7 @@ const Layout = () => {
                             </li>
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>Azure OpenAI + AI Search</h4>
+                    <h4 className={styles.headerRightText}>Blob Storage + Doc Intelligence + Azure OpenAI + AI Search</h4>
                     {useLogin && <LoginButton />}
                 </div>
             </header>
